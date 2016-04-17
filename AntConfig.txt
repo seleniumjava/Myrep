@@ -1,0 +1,121 @@
+1. Install TestNG in eclips
+Help > Install New S/W > http://beust.com/eclipse
+
+(Google > Install TestNG)
+
+Window > Show View> Other> Expanx Java
+
+2. Create Class or New >other> testNg Class
+@test
+Run the test
+3. Refresh project > Test-output folder > Index.html
+
+=======================
+priority=3,  groups={"grp3"}, enabled=false  dependsOnMethods={"<test name>"}
+Assert.assertEquals(3, 5);
+
+suite -open sel
+test - db connection
+class - open browser
+method - login
+
+
+@Test(dataProvider="getData")
+public void product(String s1, String s2, String s3){
+ System.out.println(s1+" ----- "+s2+" ------ "+s3);
+}
+
+@DataProvider
+public Object[][] getData(){
+Object[][] data=new Object[2][3];
+=======================
+4. 2 class files - batch run
+using testNg.xml
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+1. Google Dload Ant: http://ant.apache.org/bindownload.cgi?Preferred=ftp://apache.mirrors.pair.com/
+.zip archive: apache-ant-1.9.4-bin.zip [PGP] [SHA1] [SHA512] [MD5]
+
+cd D:\Selenium-Project\Workspace\<Ur project path>
+
+2. Set Env Variable
+ANT_HOME=D:\Selenium-Project\Workspace\TestNg_Ant\apache-ant-1.9.4
+Path=....................\;D:\Selenium-Project\Workspace\TestNg_Ant\apache-ant-1.9.4\bin
+
+cd D:\Selenium-Project\Workspace\Batch4
+
+3. If cmd is open close it and reopen
+>ant
+
+4. If error like Tools.jar file not present
+go to C:\Program Files (x86)\Java\jdk1.7.0_11\lib\ copy tools.jar and paste it under C:\Program Files (x86)\Java\jre7\lib
+
+5. Copy build.xml under the project
+project name= anything
+<property name="ws.home" location of home dir  value="D:\Selenium-Project\Workspace\TNG123" or "${basedir}"
+<property name="ws.jars"   value="D:\Selenium-Project\Workspace\jars"/> //all the jarfiles
+<property name="test.dest" value="${ws.home}/build"/> 
+eclips stores all the class file under src/bin
+where do we want ant to store all the class files
+<property name="test.src"  value="${ws.home}/src"/> 
+source folder loaction
+<property name="ng.result" value="test-output"/>
+testng result folders
+
+6. Targets
+<!-- clean -->
+    <target name="clean">
+        <delete dir="${test.dest}"/>
+    </target>
+Del all the class files
+
+compile
+
+7. cmd> cd D:\Selenium-Project\Workspace\TNG123\
+ant
+D:\Selenium-Project\Workspace\TNG123>ant
+Buildfile: D:\Selenium-Project\Workspace\TNG123\build.xml
+
+usage:
+     [echo]
+     [echo]             ant run will execute the test
+     [echo]
+
+BUILD SUCCESSFUL
+Total time: 1 second
+
+8. ant compile
+
+9. refresh the proj. u ll get a build folder
+ant clean 
+and refresh the proj. no build folder
+
+ant compile
+
+ant run > **xmlfileset dir="${ws.home}" includes="testng.xml"
+
+refresh project > test-output> index.html
+We ran the proj using ant
+
+Now use: TestNg XSLT reports  -- XSLT stands for XML (Extensible Markup Language) Stylesheet Language for Transformations. 
+Copy xslt package under src folder
+
+Dload SaxonLiaison.jar
+cnd> ant makexsltreports
+
+creating a bat file
+
+Open notepad
+==========
+d:
+cd D:\Selenium-Project\Workspace\TNG123\
+ant clean compile run makexsltreports
+
+open index.html file from XSLT_Result/output
+==============
+save as "TestNg_runfile.bat"
+
+del XSLT_Reports and run again
