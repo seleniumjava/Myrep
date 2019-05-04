@@ -7,7 +7,7 @@
 <!-- ========== Initialize Properties =================================== -->
     <property environment="env"/>
     <property name="ws.home" value="${basedir}"/>
-    <property name="ws.jars" value="D:\Selenium-Project\Workspace\jars"/>
+    <property name="ws.jars" value="D:\Selenium-Project\Abhishek_Project\jars"/>
     <property name="test.dest" value="${ws.home}/build"/>
     <property name="test.src" value="${ws.home}/src"/>
           <property name="ng.result" value="test-output"/>

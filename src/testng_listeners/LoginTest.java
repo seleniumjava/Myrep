@@ -1,7 +1,5 @@
 package testng_listeners;
 
-
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

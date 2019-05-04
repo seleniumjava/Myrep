@@ -3,6 +3,11 @@
 <suite name="My Test Suite">
 
   <test name="Mod1">
+  <groups>
+ <!--   <run>
+  	<include name="Reg"/>
+  </run>-->
+  </groups>
     <classes>
       <class name="Bank.Bank1"/>
       <class name="Bank.Bank4"/>
