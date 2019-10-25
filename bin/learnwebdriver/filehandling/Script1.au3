@@ -1,0 +1,8 @@
+Run("notepad.exe")
+WinWaitActive("Untitled - Notepad")
+Send("Our first script")
+sleep(2000)
+WinClose("Untitled - Notepad")
+WinWaitActive("Notepad", "Save")
+sleep(2000)
+Send("!n")

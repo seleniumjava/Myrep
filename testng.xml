@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="HDFC project" parallel="false">
+
+  <test name="Mod1">
+  
+    <classes>
+      <class name="learntestng.Loan"/>
+	  <class name="learntestng.User"/>
+    </classes>
+  </test> 
+
+  <test name="Mod2">
+  
+    <classes>
+      <class name="learntestng.MoneyTransfer"/>
+	 </classes>
+  </test>
+  
+   
+</suite> <!-- Suite -->
