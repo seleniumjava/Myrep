@@ -6,3 +6,4 @@ line 4
 =======
 line 5
 >>>>>>> 2a8a1e280cd80dff41f3f7e1cb20ef2de03b2eeb
+test6
