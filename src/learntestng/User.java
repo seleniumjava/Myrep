@@ -12,7 +12,7 @@ public class User {
 	}
 	
 	@DataProvider
-	public Object userdata() {
+	public Object[][] userdata() {
 		Object d[][]=new Object[2][3];
 		d[0][0]="u1";
 		d[0][1]="p1";

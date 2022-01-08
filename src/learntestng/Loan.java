@@ -29,7 +29,7 @@ public class Loan {
   
   @Test
   public void google() throws InterruptedException {
-	  System.setProperty("webdriver.chrome.driver", "D:\\Selenium-Project\\Abhishek_Project\\Dloads\\Browserdrivers\\chromedriver_win32\\chromedriver.exe");
+	  System.setProperty("webdriver.chrome.driver", ".\\src\\chromedriver.exe");
 		WebDriver driver =new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://google.co.in");

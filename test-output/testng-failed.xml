@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [HDFC project]">
+  <test name="Mod2(failed)">
+    <classes>
+      <class name="learntestng.MoneyTransfer">
+        <methods>
+          <include name="RTGS"/>
+          <include name="login"/>
+          <include name="Gpay"/>
+          <include name="logout"/>
+          <include name="closeBrowser"/>
+          <include name="openbrowser"/>
+        </methods>
+      </class> <!-- learntestng.MoneyTransfer -->
+      <class name="learntestng.Loan">
+        <methods>
+          <include name="openbrowser"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- learntestng.Loan -->
+    </classes>
+  </test> <!-- Mod2(failed) -->
+</suite> <!-- Failed suite [HDFC project] -->
